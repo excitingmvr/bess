@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value = "/codeGroup/")
+@RequestMapping(value = "/codeGroup/")	// /codeGroup/codeGroupList
 public class CodeGroupController {
 
 	@Autowired
