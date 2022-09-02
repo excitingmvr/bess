@@ -14,6 +14,7 @@
 		FROM infrCodeGroup a
 		WHERE 1=1
 			AND ifcgDelNy = 0
+			AND ifcgName LIKE CONCAT('%',#{shValue},'%')
 	</select>
 
 </mapper>	
