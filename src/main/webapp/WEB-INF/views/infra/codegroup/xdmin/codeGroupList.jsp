@@ -26,3 +26,7 @@ codegroup
 	<c:out value="${list.ifcgSeq }"/> / <c:out value="${list.ifcgName }"/>
 	<br>		
 </c:forEach>
+
+<br>
+
+<a href="codeGroupForm">신규</a>

@@ -14,7 +14,6 @@
 		FROM infrCodeGroup a
 		WHERE 1=1
 			AND ifcgDelNy = 0
-			AND ifcgName LIKE CONCAT('%',#{shValue},'%')
 			
 			<!-- <if test="shDelNy != null and !shDelNy.equals('')">AND ifcgDelNy = #{shDelNy}</if> -->
 			<choose>
@@ -23,6 +22,21 @@
 				<when test="shOption == 3">AND ifcgNameEng LIKE CONCAT('%',#{shValue},'%')</when>
 				<otherwise></otherwise>
 			</choose>
+		ORDER BY ifcgSeq DESC
 	</select>
+	
+	<insert id="insert">
+		INSERT INTO infrCodeGroup (
+			ifcgName
+			,ifcgDelNy
+		)
+		VALUES (
+			#{ifcgName}
+			,0		
+		)
+		 <selectKey resultType="String" keyProperty="ifcgSeq" order="AFTER">
+			SELECT last_insert_id()
+		 </selectKey>
+	</insert>
 
 </mapper>	
