@@ -15,6 +15,14 @@
 		WHERE 1=1
 			AND ifcgDelNy = 0
 			AND ifcgName LIKE CONCAT('%',#{shValue},'%')
+			
+			<!-- <if test="shDelNy != null and !shDelNy.equals('')">AND ifcgDelNy = #{shDelNy}</if> -->
+			<choose>
+				<when test="shOption == 1">AND ifcgSeq = #{shValue}</when>
+				<when test="shOption == 2">AND ifcgName LIKE CONCAT('%',#{shValue},'%')</when>
+				<when test="shOption == 3">AND ifcgNameEng LIKE CONCAT('%',#{shValue},'%')</when>
+				<otherwise></otherwise>
+			</choose>
 	</select>
 
 </mapper>	
