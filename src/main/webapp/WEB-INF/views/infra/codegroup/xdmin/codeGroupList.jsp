@@ -29,4 +29,4 @@ codegroup
 
 <br>
 
-<a href="codeGroupForm">신규</a>
+<a href="/codeGroup/codeGroupForm">신규</a>

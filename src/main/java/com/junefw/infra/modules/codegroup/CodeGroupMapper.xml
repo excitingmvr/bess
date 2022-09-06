@@ -23,7 +23,7 @@
 				<otherwise></otherwise>
 			</choose>
 		ORDER BY ifcgSeq DESC
-	</select>
+	</select> 
 	
 	<insert id="insert">
 		INSERT INTO infrCodeGroup (
@@ -38,5 +38,6 @@
 			SELECT last_insert_id()
 		 </selectKey>
 	</insert>
+	
 
 </mapper>	
