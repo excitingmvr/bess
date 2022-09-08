@@ -23,7 +23,7 @@ codegroup
      <input type="submit">
 </form>
 <c:forEach items="${list}" var="list" varStatus="status">
-	<c:out value="${list.ifcgSeq }"/> / <c:out value="${list.ifcgName }"/>
+	<a href="/codeGroup/codeGroupView?ifcgSeq=<c:out value="${list.ifcgSeq }"/>"><c:out value="${list.ifcgSeq }"/> / <c:out value="${list.ifcgName }"/></a>
 	<br>		
 </c:forEach>
 

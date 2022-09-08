@@ -17,7 +17,11 @@
 <br>
 <form name="myForm" id="myForm" method="post" action="/codeGroup/codeGroupInst">
 
-	<input type="text" name="ifcgName" id="ifcgName">
+	<input type="text" name="ifcgName" id="ifcgName" value="<c:out value="${item.ifcgName }"/>">
+	<br>
+	ifcgSeq : <c:out value="${item.ifcgSeq }"/>
+	<br>
+	ifcgName : <c:out value="${item.ifcgName }"/>
 	<br>
 	<select name="telecom" id="telecom">
 		<option>선택하세요</option>

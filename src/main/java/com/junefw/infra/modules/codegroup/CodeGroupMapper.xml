@@ -39,5 +39,13 @@
 		 </selectKey>
 	</insert>
 	
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			a.*
+		FROM infrCodeGroup a
+		WHERE 1=1
+			AND ifcgSeq = #{ifcgSeq}
+	</select> 
 
 </mapper>	
